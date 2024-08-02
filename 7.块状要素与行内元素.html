@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>块状要素与行内元素</title>
+</head>
+
+<body>
+
+    <marquee>aaaaaaaa</marquee>
+    <h1>a</h1>
+    <p>a</p>
+    <div>a</div>
+    <input type="text" name="" id="">
+    <span>aaaaa</span>
+
+
+    <!-- 规则1 块级元素能写几乎任何元素 块级或行内-->
+    <!-- <div>
+        <input type="text">
+        <h1>a</h1>
+    </div> -->
+    <!--规则2 行内元素能写行内元素但是不能写块状元素  -->
+    <span>
+        <span>xy</span>
+        <input type="text">
+        <div>aaa</div>
+        <!-- 这个div是错的程序不会报错但是要默认不能装块状元素 -->
+    </span>
+    <!--span和div的区别就是span是小的容器 div是大容器  -->
+
+    <span>aaa</span>
+    <!-- 上方是两个span是两个行内元素效果应该是并列的关系 -->
+    <!-- 但事实是浏览器中选中第一个span时会显示第二个span在第一个span中造成错误 -->
+    <!-- 原因就是在第一个span中添加了块元素 -->
+
+    <!-- 特殊规则：h1-h6不能互相嵌套 -->
+    <!-- p标签中不能写块元素 -->
+    <p>
+        <h1>aa</h1>
+    </p>
+    <!-- p标签会把h1给甩出去不在包含h1 -->
+    <!-- 如果是marquee则不会甩出，因为marquee已经过时已经不常用 -->
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表格标签</title>
+</head>
+
+<body>
+    <!-- 为什么使用表格标签 1.简单通用 2.基本结构 -->
+    <!-- 表格 
+    行标签  tr
+    列标签  td
+    -->
+    <table border="1px">
+        <!-- 表格加边框 border 1px 给他边框1px的宽度-->
+        <tr>
+            <!-- colspan代表跨几列合并单元格 -->
+            <td colspan="4">1-1</td>
+            <td>1-2</td>
+            <td>1-3</td>
+        </tr>
+        <tr>
+            <!-- rowspan代表跨几行合并单元格 -->
+            <td rowspan="2">2-1</td>
+            <td>2-2</td>
+            <td>2-3</td>
+        </tr>
+        <tr>
+            <td>3-1</td>
+            <td>3-2</td>
+            <td>3-3</td>
+        </tr>
+    </table>
+    <!-- 生成了3*3的表格 -->
+</body>
+
+</html>
