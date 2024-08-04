@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表单常用控件</title>
+</head>
+
+<body>
+    <form action="https://search.jd.com/search">
+        账户<input type="text" name="account" value="12345678" maxlength="8"> <br>
+        密码<input type="password" name="pass" value="123" maxlength="8"><br>
+        <!-- type不同的值代表的是输入框不同的意义 text代表输入任何值 password代表输入的数会被小圆点代替 -->
+        <!--value代表的是搜索框的默认值  maxlength代表的是输入文字最大值-->
+        性别
+        <input type="radio" name="gander" value="male">男
+        <input type="radio" name="gander" value="female" checked>女
+        <!-- radio代表的就是单选的小圆点  gander写完之后因为名字相同男女就会被分为一组了-->
+        <!-- 但仍然有问题就是在传递数据后 网址只会显示选择了 而不会显示选择了男还是女 -->
+        <!--解决这个问题的方法就是添加value属性 不能不写value  -->
+        <!-- checked本身就有选中的意思 加了checked后就会默认选中女 -->
+        <br>
+        爱好
+        <input type="checkbox" name="hobby" value="smoke">抽烟
+        <input type="checkbox" name="hobby" value="drink">喝酒
+        <input type="checkbox" name="hobby" value="perm">烫头
+        <!-- checkbox表示的就是复选框了 -->
+        <br>
+        <!-- 文本域与下拉框 -->
+        其他<textarea name="othrt" cols="23" rows="3 "></textarea>
+        <!--input无法换行 textarea是没有type属性的  cols列数 rows行数 -->
+        <br>
+        籍贯<select name="place">
+            <option value="ji">河北</option>
+            <option value="lu">山东</option>
+            <option value="shan">陕西</option>
+            <option value="hei" selected>黑龙江</option>
+            <!--在提交后 select的value会在其中的选项的值中选  -->
+            <!-- 如果没有给其中的选项附value值那么就会place=河北/山东/山东/黑龙江 -->
+            <!-- 加了selected就会默认选这个 -->
+        </select>
+        <br>
+        <!-- 隐藏域 -->
+        <input type="hidden" name="form" value="123">
+        <!-- 不会在用户页面显示 但是会随着数据的传递值而传递值 是反爬虫手段 -->
+        <br>
+        <!-- 确认按钮第一种写法 -->
+        <button>确定</button>
+        <!--  确认按钮第二种写法  input转化为一个按钮 value就是按钮上的字-->
+        <!-- 带submit的输入框不能写那么 因为它现在已近不是输入框了而是按钮 -->
+        <input type="submit" value="确认">
+        <!-- 对于按钮来说 它本来就有一个type属性为submit 会让表单数据提交 只是为默认值所以不用写 -->
+
+        <!--重置同样有两种写法  -->
+        <button type="reset">重置</button>
+        <input type="reset" value="重置">
+        <!-- 必须加reset 否则重置按钮和确认按钮作用一样 -->
+        <!-- 对于按钮来说name属性无意义 不要写 -->
+
+        <!-- 表单里的普通按钮 -->
+        <!-- 如果一个按钮不会引起表单提交或者不会引起表单重置那么这个按钮就叫普通按钮 -->
+        <button type="button">检测账户是否会注册</button>
+    </form>
+    <!-- 账号输入和密码输入可以没有value单选框和复选框一定要记得加复选框 -->
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表单</title>
+</head>
+
+<body>
+    <!-- 表单时一个网页中的交互区域，专门收集用户的数据 -->
+    <!--  登陆页面就是一个表单 其中的按钮什么的就是控件 -->
+    <form action="https://www.baidu.com/s">
+        <!-- action表示表单要交给谁去处理 -->
+        <!-- 平常输入网址不需要加上/s，指的是search表示直接用百度进行搜索 -->
+        <input type="text" name="wd">
+        <!-- 注意这里的wd必须这么写固定的 百度规定的 /s和wd搭配 -->
+        <button>去百度搜索</button>
+    </form>
+    <hr>
+    <form action="https://search.jd.com/search" target="_blank">
+        <input type="text" name="keyword">
+        <!-- 京东规定的/searh和keyword对应 -->
+         <!-- target代表新开的页面在新页面还是本页面打开 -->
+        <button>去京东搜索</button>
+    </form>
+    <!-- 表单和超链接虽然能实现类似的功能，但是超链接侧重的时跳转，而表单侧重于收集数据 -->
+</body>
+
+</html>

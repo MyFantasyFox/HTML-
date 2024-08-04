@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>禁用表单控件</title>
+</head>
+
+<body>
+    <form action="https://search.jd.com/search">
+        <fieldset>
+            <legend>主要信息</legend>
+            <label for="a">账户</label><input id="a" type="text" name="account" value="12345678" maxlength="8"> <br>
+            <!-- 如果for中不写任何文字就无法与文本框进行关联  只有for中填入要关联的id才可以关联-->
+            <!-- 之后点击“账户默认文本框获得焦点” -->
+            <label>
+                密码<input id="b" type="password" name="pass" value="123" maxlength="8"><br>
+            </label>
+            <!-- 这样可以达到同样的效果可以进行关联 -->
+            <!-- 这两种都可以使用 如果离得远用第一种 离得近就用第二种 -->
+            <!-- 加disable就是不让输入 几乎所有标签都可以用 -->
+            性别
+            <input type="radio" name="gander" value="male">男
+            <input type="radio" name="gander" value="female" checked>女
+            <br>
+        </fieldset>
+
+        <fieldset>
+            <legend>附加信息</legend>
+            爱好
+            <input type="checkbox" name="hobby" value="smoke">抽烟
+            <input type="checkbox" name="hobby" value="drink">喝酒
+            <input type="checkbox" name="hobby" value="perm">烫头
+            <br>
+            其他<textarea name="othrt" cols="23" rows="3 "></textarea>
+            籍贯<select name="place">
+                <option value="ji">河北</option>
+                <option value="lu">山东</option>
+                <option value="shan">陕西</option>
+                <option value="hei" selected>黑龙江</option>
+            </select>
+            <br>
+            <input type="hidden" name="form" value="123">
+            <br>
+            <button>确定</button>
+            <button type="reset">重置</button>
+            <!-- 获取焦点 不如当你想在一个文本框中输入时只要点击就会有一个黑框选选中 这就叫获取焦点 -->
+        </fieldset>
+
+    </form>
+</body>
+
+</html>
